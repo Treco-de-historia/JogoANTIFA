@@ -54,6 +54,7 @@ const dicas = [
 ];
 
 var forca = document.getElementById('forca')
+var vidas = document.getElementById('vidas')
 var btndica = document.getElementById('dica')
 var estadoDica = 0
 var palavraCorreta = ""
@@ -62,20 +63,32 @@ let acertos = 0
 
 function Forca() {
     if (erros === 4) {
-        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |             <br> |             <br> |            </pre>";
+        vidas.style.color = '#22B14C'
+        forca.style.color = '#22B14C'
+        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |             <br> |             <br> |            </pre>";
     } else if (erros === 3) {
-        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |             <br> |            </pre>";
+        vidas.style.color = '#B5E61D'
+        forca.style.color = '#B5E61D'
+        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |             <br> |            </pre>";
     } else if (erros === 2) {
-        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |            </pre>";
+        vidas.style.color = '#E0D500'
+        forca.style.color = '#E0D500'
+        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |            </pre>";
     } else if (erros === 1) {
-        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
+        vidas.style.color = '#FF7F27'
+        forca.style.color = '#FF7F27'
+        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
     } else if (erros === 0) {
-        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      X_X <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
+        vidas.style.color = '#ED1C24'
+        forca.style.color = '#ED1C24'
+        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      X_X <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
     }
 }
 
 function sortearPalavra() {
-    forca.innerHTML = '<pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
+    forca.style.color = '#00A2E8'
+    vidas.style.color = '#00A2E8'
+    forca.innerHTML = '<pre>  ___ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
     const palavraSorteada = palavras[Math.floor(Math.random() * palavras.length)]
     indice = palavras.indexOf(palavraSorteada);
     palavra = palavraSorteada
@@ -84,6 +97,8 @@ function sortearPalavra() {
 }
 
 function reiniciarJogo() {
+    forca.style.color = '#00A2E8'
+    vidas.style.color = '#00A2E8'
     let dica = document.getElementById('divDica')
     dica.innerHTML = ''
     estadoDica = 0
@@ -93,7 +108,7 @@ function reiniciarJogo() {
     objetivo = []
     erros = 5
     acertos = 0
-    forca.innerHTML = '<pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
+    forca.innerHTML = '<pre>  ___ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
     document.getElementById('erros').innerHTML = erros
     var palavraDiv = document.getElementById('palavra')
     palavraDiv.innerHTML = ''
@@ -131,7 +146,9 @@ function habilitarBotoes() {
 }
 
 function atualizarObjetivo() {
-    forca.innerHTML = '<pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
+    forca.style.color = '#00A2E8'
+    vidas.style.color = '#00A2E8'
+    forca.innerHTML = '<pre>  ___ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
     habilitarBotoes()
     erros = 5
     document.getElementById('erros').innerHTML = erros
@@ -145,7 +162,7 @@ function atualizarObjetivo() {
     objetivo.forEach((_, idx) => {
         const letra = document.createElement('DIV')
         letra.setAttribute('class', 'letra')
-        letra.setAttribute('id', `letra${idx}`)
+        letra.setAttribute('id', letra${idx})
         letra.classList.add('p-5', 'text-center', 'text-4xl', 'flex', 'items-center', 'justify-center', 'border-dashed', 'border-2', 'border-black', 'w-12', 'h-12')
         palavraDiv.appendChild(letra)
     })
@@ -191,9 +208,9 @@ const jogada = (btn) => {
 
     if (objetivoNormalizado.every((letra) => letra !== letraNormalizada)) {
         erros = erros - 1;
-        btn.classList.add('erro');  // Estilização para erro
+        btn.classList.add('erro');
     } else {
-        btn.classList.add('acerto');  // Estilização para acerto
+        btn.classList.add('acerto');
         for (let i = 0; i < objetivo.length; i++) {
             if (letraNormalizada === removerAcentos(objetivo[i])) {
                 document.getElementById('letra' + i).innerHTML = objetivo[i];  

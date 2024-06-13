@@ -85,7 +85,13 @@ pre{
     font-size: 18px;
 }
 
+#vidas {
+    color: #00A2E8;
+}
+
 #forca {
+    color: #00A2E8;
+    font-weight: bold;
     text-align: left;
     border: 1px solid #ccc;
     padding: 0px;
@@ -169,6 +175,7 @@ pre{
 
     #divDica{
         font-size: 15px;
+        width: 700px;
     }
 
     .letra {
@@ -181,7 +188,16 @@ pre{
 @media (max-width: 426px) {
     #container{
         width: 350px;
-        height: 470px;
+        height: 570px;
+    }
+
+    h1{
+        font-size: 1.9em;
+    }
+
+    #divDica{
+        font-size: 14px;
+        width: 350px;
     }
 
     .letra {
@@ -194,15 +210,25 @@ pre{
         font-size: 15px;
     }
 
-    #botoes{
-        display: none;
+    #botoes button {
+        width: 28px;
+        padding: 7px;
     }
 }
 
 @media (max-width: 376px) {
     #container{
         width: 310px;
-        height: 450px;
+        height: 560px;
+    }
+
+    #divDica{
+        font-size: 13px;
+        width: 310px;
+    }
+
+    h1{
+        font-size: 1.8em;
     }
 
     .letra {
@@ -214,15 +240,27 @@ pre{
     pre{
         font-size: 13px;
     }
+
+    #botoes button {
+        width: 25px;
+        font-size: 13px;
+        padding: 10px 4px;
+    }
 }
 
 @media (max-width: 321px) {
     #container{
         width: 270px;
-        height: 420px;
+        height: 550px;
     }
+
+    #divDica{
+        font-size: 12px;
+        width: 270px;
+    }
+
     h1{
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
 
     .icone{
@@ -240,5 +278,12 @@ pre{
 
     pre{
         font-size: 11px;
+    }
+
+    #botoes button {
+        margin: 2px;
+        width: 23px;
+        font-size: 9px;
+        padding: 10px 3px;
     }
 }
