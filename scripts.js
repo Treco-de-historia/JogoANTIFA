@@ -88,7 +88,7 @@ function Forca() {
 function sortearPalavra() {
     forca.style.color = '#00A2E8'
     vidas.style.color = '#00A2E8'
-    forca.innerHTML = '<pre>  ___ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
+    forca.innerHTML = '<pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
     const palavraSorteada = palavras[Math.floor(Math.random() * palavras.length)]
     indice = palavras.indexOf(palavraSorteada);
     palavra = palavraSorteada
@@ -108,7 +108,7 @@ function reiniciarJogo() {
     objetivo = []
     erros = 5
     acertos = 0
-    forca.innerHTML = '<pre>  ___ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
+    forca.innerHTML = '<pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
     document.getElementById('erros').innerHTML = erros
     var palavraDiv = document.getElementById('palavra')
     palavraDiv.innerHTML = ''
@@ -116,7 +116,7 @@ function reiniciarJogo() {
         btn.disabled = false
         btn.classList.remove('bg-slate-300')
         btn.classList.add('hover:bg-cyan-600')
-        btn.classList.remove('erro', 'acerto');  // Remove as classes de estilo
+        btn.classList.remove('erro', 'acerto'); 
     })
     desabilitarBotoes()
 }
@@ -148,7 +148,7 @@ function habilitarBotoes() {
 function atualizarObjetivo() {
     forca.style.color = '#00A2E8'
     vidas.style.color = '#00A2E8'
-    forca.innerHTML = '<pre>  ___ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
+    forca.innerHTML = '<pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        '
     habilitarBotoes()
     erros = 5
     document.getElementById('erros').innerHTML = erros
