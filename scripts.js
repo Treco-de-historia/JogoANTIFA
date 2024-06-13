@@ -162,7 +162,7 @@ function atualizarObjetivo() {
     objetivo.forEach((_, idx) => {
         const letra = document.createElement('DIV')
         letra.setAttribute('class', 'letra')
-        letra.setAttribute('id', letra$,{idx})
+        letra.setAttribute('id', `letra${idx}`)
         letra.classList.add('p-5', 'text-center', 'text-4xl', 'flex', 'items-center', 'justify-center', 'border-dashed', 'border-2', 'border-black', 'w-12', 'h-12')
         palavraDiv.appendChild(letra)
     })
