@@ -65,23 +65,23 @@ function Forca() {
     if (erros === 4) {
         vidas.style.color = '#22B14C'
         forca.style.color = '#22B14C'
-        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |             <br> |             <br> |            </pre>";
+        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |             <br> |             <br> |            </pre>";
     } else if (erros === 3) {
         vidas.style.color = '#B5E61D'
         forca.style.color = '#B5E61D'
-        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |             <br> |            </pre>";
+        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |             <br> |            </pre>";
     } else if (erros === 2) {
         vidas.style.color = '#E0D500'
         forca.style.color = '#E0D500'
-        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |            </pre>";
+        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |            </pre>";
     } else if (erros === 1) {
         vidas.style.color = '#FF7F27'
         forca.style.color = '#FF7F27'
-        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
+        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      (_) <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
     } else if (erros === 0) {
         vidas.style.color = '#ED1C24'
         forca.style.color = '#ED1C24'
-        forca.innerHTML = "<pre>  ___ <br> |/      | <br> |      X_X <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
+        forca.innerHTML = "<pre>  _______ <br> |/      | <br> |      X_X <br> |      \\|/   <br> |       |      <br> |      / \\     </pre>";
     }
 }
 
