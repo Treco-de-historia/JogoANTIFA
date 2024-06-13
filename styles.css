@@ -1,0 +1,244 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 800px;
+    height: 640px;
+}
+
+h1 {
+    width: 95%;
+    text-align: center;
+    padding: 15px;
+    font-size: 2em;
+    margin: 0;
+    border-bottom: 2px solid rgb(197, 197, 197);
+}
+
+.status-bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.vidas {
+    margin-left: 8px;
+}
+
+.acerto:disabled{
+    background-color: rgb(96, 172, 96) !important;
+    border: 2px solid rgb(78, 136, 78) !important;
+}
+
+.erro:disabled{
+    background-color: rgb(219, 86, 86) !important;
+    border: 2px solid rgb(152, 62, 62) !important;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+pre{
+    font-size: 18px;
+    margin-left: 35px;
+}
+
+#divDica{
+    width: 100vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#forca {
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#palavra {
+    display: flex;
+    height: 50px;
+}
+
+.letra {
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 25px;
+}
+
+#sortearPalavra{
+    width: 120px;
+    margin-right: 20px;
+}
+
+#reiniciarJogo{
+    width: 120px;
+}
+
+.icone{
+    margin-right: 10px;
+}
+
+#botoes {
+    text-align: center;
+}
+
+#botoes button {
+    background-color: #0ea5e9;
+    border: solid 2px #2386b3;
+    margin: 3px;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+#botoes button:hover {
+    background-color: #0284c7;
+}
+
+#botoes button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    border: solid 2px #ababab;
+}
+
+#dica{
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    #container{
+        width: 700px;
+    }
+
+    #divDica{
+        font-size: 15px;
+    }
+
+    .letra {
+        font-size: 1.7em;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 426px) {
+    #container{
+        width: 350px;
+        height: 470px;
+    }
+
+    .letra {
+        font-size: 0.8em;
+        width: 12px;
+        height: 12px;
+    }
+
+    pre{
+        font-size: 15px;
+    }
+
+    #botoes{
+        display: none;
+    }
+}
+
+@media (max-width: 376px) {
+    #container{
+        width: 310px;
+        height: 450px;
+    }
+
+    .letra {
+        font-size: 0.7em;
+        width: 10px;
+        height: 10px;
+    }
+
+    pre{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 321px) {
+    #container{
+        width: 270px;
+        height: 420px;
+    }
+    h1{
+        font-size: 1.8em;
+    }
+
+    .icone{
+        margin-right: 2px;
+    }
+
+    .fa-skull{
+        font-size: 0.9em;
+    }
+
+    .letra {
+        font-size: 0.7em;
+        width: 8px;
+    }
+
+    pre{
+        font-size: 11px;
+    }
+}

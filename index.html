@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca ANTIFA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1><span><i class="fa-solid fa-skull"></i> Jogo ANTIFA <span><i class="fa-solid fa-skull"></i></span></h1>
+
+        <div class="status-bar">
+            <div class="vidas"><i class="fa-solid fa-heart icone"></i> <b>Vidas:</b> <span id="erros">5</span></div>
+            <button id="dica" onclick="Dica()">
+                <i class="fa-solid fa-lightbulb icone"></i> Dica 
+            </button>
+        </div>
+        <div></div>
+
+        <div id="divDica"></div>
+        
+        <div class="game-area">
+            <div id="forca">
+                <pre>  _______ <br> |/      | <br> |         <br> |             <br> |             <br> |        
+            </div>
+        </div>
+
+        <div id="palavra"></div>
+
+        <div class="controls">
+            <button id="sortearPalavra" onclick="sortearPalavra()">
+                <i class="fa-solid fa-gamepad icone"></i> Sortear 
+            </button>
+            <button id="reiniciarJogo" onclick="reiniciarJogo()">
+                <i class="fa-regular fa-circle-xmark icone"></i> Desistir 
+            </button>
+        </div>
+
+        <div id="botoes"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
